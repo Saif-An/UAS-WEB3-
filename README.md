@@ -31,7 +31,7 @@ Langkah Instalasi
 1. Smart Contract
    1. Buka [Remix IDE](https://remix.ethereum.org/?#nomobileredirect&lang=en&optimize&runs=200&evmVersion&version=soljson-v0.8.31+commit.fd3a2265.js).
    2. Compile file `.sol`.
-   3. Deploy ke Injected Provider (MetaMask) pada jaringan Sepolia.
+   3. Deploy ke Sepolia Tesnet (MetaMask) pada jaringan Sepolia.
    4. Salin "Contract Address" dan "ABI" ke frontend.
 
 2. Frontend
