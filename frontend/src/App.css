@@ -1,0 +1,79 @@
+/* Container Utama */
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f1f5f9; /* Warna abu-abu sangat muda agar kartu putih terlihat jelas */
+}
+
+/* Navbar dengan Flexbox */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-section h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 10px;
+}
+
+/* Tata Letak Utama dengan CSS Grid */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default untuk Mobile: 1 kolom */
+  gap: 30px;
+}
+
+/* Media Query untuk Tablet & Desktop */
+@media (min-width: 992px) {
+  .main-grid {
+    grid-template-columns: 350px 1fr; /* Sidebar saldo & Main area list */
+    align-items: start;
+  }
+
+  .balance-area {
+    position: sticky; /* Saldo tetap terlihat saat scroll */
+    top: 20px;
+  }
+}
+
+/* Styling Komponen (Agar seragam) */
+.balance-area,
+.transaction-area {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Penyesuaian Mobile (Lebar < 600px) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-section {
+    padding: 30px 10px;
+  }
+}
